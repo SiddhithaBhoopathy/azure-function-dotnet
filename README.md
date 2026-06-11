@@ -24,8 +24,6 @@ uses Datadog **Direct Log Submission** (agentless, in-process):
 - `DD_LOGS_DIRECT_SUBMISSION_INTEGRATIONS=ILogger` — the tracer's automatic instrumentation ships
   `ILogger` logs straight to the Datadog logs intake over HTTPS (URL derived from `DD_SITE`).
 
-This is **config-only** — no NuGet log sink and no logging code in the app. Because the logs leave
-the process carrying the trace ID, Datadog links them to the compat-layer traces automatically.
 
 ## Repo layout
 
