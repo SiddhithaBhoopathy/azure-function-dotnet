@@ -57,11 +57,10 @@ echo ">> Applying Datadog application settings..."
 #   (b) DD_API_KEY / DD_SITE / tagging     -> where + how telemetry is sent.
 #   (c) DD_LOGS_INJECTION=true             -> stamps dd_trace_id/dd_span_id into logs so
 #       the correlated log path links to traces.
-#   (d) DD_LOGS_DIRECT_SUBMISSION_INTEGRATIONS=ILogger -> the FIX (Path A), config-only:
+#   (d) DD_LOGS_DIRECT_SUBMISSION_INTEGRATIONS=ILogger -> config-only correlated logs:
 #       the tracer's automatic instrumentation ships Microsoft.Extensions.Logging (ILogger)
 #       logs straight to the Datadog intake over HTTPS (URL derived from DD_SITE). No NuGet
 #       sink, no app code. These arrive with dd.trace_id and correlate with the traces.
-#       Comment this line out to fall back to forwarder-only logs (the customer's repro).
 az functionapp config appsettings set \
   --name "$FUNCTION_APP" \
   --resource-group "$RESOURCE_GROUP" \
