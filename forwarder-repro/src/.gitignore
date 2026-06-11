@@ -1,0 +1,17 @@
+# Azure Functions localsettings file
+local.settings.json
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+.vs/
+publish/
+
+# NuGet
+*.nupkg
+**/packages/*
+
+# JetBrains Rider
+.idea/
+*.sln.iml

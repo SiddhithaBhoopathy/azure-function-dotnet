@@ -1,0 +1,17 @@
+# Secrets
+.env
+*.local.settings.json
+**/local.settings.json
+
+# Build output
+**/bin/
+**/obj/
+**/publish_test/
+
+# OS
+.DS_Store
+**/.DS_Store
+
+# Unrelated internal repo (kept locally only, not part of this reproduction)
+serverless-compat-self-monitoring-main/
+*.zip
